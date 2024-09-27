@@ -4,9 +4,6 @@ import numpy as np
 from gymnasium import spaces
 
 class MonsterWorldGenEnv(gym.Env):
-    def render(self):
-        pass
-
     metadata = {"render_modes": [], "render_fps": 4}
 
     def __init__(self):
@@ -73,6 +70,9 @@ class MonsterWorldGenEnv(gym.Env):
                 if monster1.health <= 0:
                     break
         return wins / 100
+
+    def render(self):
+        pass
 
 
 class Monster:
